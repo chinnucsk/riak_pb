@@ -189,7 +189,9 @@ decoder_for(N) when N >= 3, N < 7;
                     N >= 50, N =< 53 ->
     riak_kv_pb;
 decoder_for(N) when N >= 27, N =< 28 ->
-    riak_search_pb.
+    riak_search_pb;
+decoder_for(N) when N >= 54, N =< 57 ->
+    riak_yokozuna_pb.
 
 %% @doc Selects the appropriate PB encoder for a given message name.
 -spec encoder_for(atom()) -> module().
